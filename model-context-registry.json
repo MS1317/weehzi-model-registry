@@ -1,6 +1,20 @@
 {
   "schemaVersion": 1,
-  "registryVersion": "2026-08-02.1",
-  "generatedAt": "2026-08-02T01:07:00.000Z",
-  "entries": []
+  "registryVersion": "2026-08-02.2",
+  "generatedAt": "2026-08-02T03:47:00.000Z",
+  "entries": [
+    {
+      "provider": "openai",
+      "modelId": "gpt-5.4",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "aliases": [
+        "gpt-5.4-2026-03-05"
+      ],
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.4",
+        "verifiedAt": "2026-08-02T03:47:00.000Z"
+      }
+    }
+  ]
 }
