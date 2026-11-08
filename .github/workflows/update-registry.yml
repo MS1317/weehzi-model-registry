@@ -1,0 +1,58 @@
+name: Update registry
+
+# Reads the context sizes NVIDIA publishes on build.nvidia.com and publishes model-context-registry.json when one
+# changed. See scripts/update-registry.mjs. No secret is needed: NVIDIA's model list and pages are public.
+on:
+  schedule:
+    # Every day at 03:17 UTC; GitHub delays jobs at the start of the hour, so the minute is not :00.
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: update-registry
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Test the update script
+        run: node --test scripts/registry.test.mjs
+
+      - name: Read NVIDIA's model pages
+        run: node scripts/update-registry.mjs
+
+      - name: Publish when the registry changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+          # GitHub switches a public repository's scheduled job off after 60 days without activity. When nothing has
+          # changed for this many days, an empty commit keeps the daily check running.
+          KEEP_ACTIVE_AFTER_DAYS: 45
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet -- model-context-registry.json; then
+            git add model-context-registry.json
+            git commit -m "Update NVIDIA context sizes from build.nvidia.com"
+            git push
+            # A push made with this job's own token does not start a Pages build, so the job asks for one.
+            gh api --method POST "repos/${{ github.repository }}/pages/builds"
+            exit 0
+          fi
+          echo "No change to publish."
+          last_commit=$(git log -1 --format=%ct)
+          if [ $(( ($(date +%s) - last_commit) / 86400 )) -ge "$KEEP_ACTIVE_AFTER_DAYS" ]; then
+            git commit --allow-empty -m "Keep the daily registry check active"
+            git push
+          fi
