@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "registryVersion": "2026-08-02.2",
-  "generatedAt": "2026-08-02T03:47:00.000Z",
+  "registryVersion": "2026-11-08.1",
+  "generatedAt": "2026-11-08T21:35:37.329Z",
   "entries": [
     {
       "provider": "openai",
@@ -14,6 +14,222 @@
       "provenance": {
         "source": "https://developers.openai.com/api/docs/models/gpt-5.4",
         "verifiedAt": "2026-08-02T03:47:00.000Z"
+      }
+    },
+    {
+      "provider": "nvidia",
+      "modelId": "adept/fuyu-8b",
+      "contextWindow": 16384,
+      "provenance": {
+        "source": "https://build.nvidia.com/adept/fuyu-8b",
+        "verifiedAt": "2026-11-08T21:35:37.329Z"
+      }
+    },
+    {
+      "provider": "nvidia",
+      "modelId": "deepseek-ai/deepseek-v4.1-flash",
+      "contextWindow": 1048576,
+      "provenance": {
+        "source": "https://build.nvidia.com/deepseek-ai/deepseek-v4.1-flash",
+        "verifiedAt": "2026-11-08T21:35:37.329Z"
+      }
+    },
+    {
+      "provider": "nvidia",
+      "modelId": "google/diffusiongemma-26b-a4b-it",
+      "contextWindow": 262144,
+      "provenance": {
+        "source": "https://build.nvidia.com/google/diffusiongemma-26b-a4b-it",
+        "verifiedAt": "2026-11-08T21:35:37.329Z"
+      }
+    },
+    {
+      "provider": "nvidia",
+      "modelId": "google/gemma-4-31b-it",
+      "contextWindow": 262144,
+      "provenance": {
+        "source": "https://build.nvidia.com/google/gemma-4-31b-it",
+        "verifiedAt": "2026-11-08T21:35:37.329Z"
+      }
+    },
+    {
+      "provider": "nvidia",
+      "modelId": "meta/llama-3.2-90b-vision-instruct",
+      "contextWindow": 131072,
+      "provenance": {
+        "source": "https://build.nvidia.com/meta/llama-3.2-90b-vision-instruct",
+        "verifiedAt": "2026-11-08T21:35:37.329Z"
+      }
+    },
+    {
+      "provider": "nvidia",
+      "modelId": "meta/llama-guard-4-12b",
+      "contextWindow": 163840,
+      "provenance": {
+        "source": "https://build.nvidia.com/meta/llama-guard-4-12b",
+        "verifiedAt": "2026-11-08T21:35:37.329Z"
+      }
+    },
+    {
+      "provider": "nvidia",
+      "modelId": "meta/muse-glimmer-30b",
+      "contextWindow": 131072,
+      "provenance": {
+        "source": "https://build.nvidia.com/meta/muse-glimmer-30b",
+        "verifiedAt": "2026-11-08T21:35:37.329Z"
+      }
+    },
+    {
+      "provider": "nvidia",
+      "modelId": "microsoft/phi-3-vision-128k-instruct",
+      "contextWindow": 131072,
+      "provenance": {
+        "source": "https://build.nvidia.com/microsoft/phi-3-vision-128k-instruct",
+        "verifiedAt": "2026-11-08T21:35:37.329Z"
+      }
+    },
+    {
+      "provider": "nvidia",
+      "modelId": "minimaxai/minimax-m3.1-flash",
+      "contextWindow": 262144,
+      "provenance": {
+        "source": "https://build.nvidia.com/minimaxai/minimax-m3.1-flash",
+        "verifiedAt": "2026-11-08T21:35:37.329Z"
+      }
+    },
+    {
+      "provider": "nvidia",
+      "modelId": "mistralai/mistral-large-4-1t-a52b",
+      "contextWindow": 262144,
+      "provenance": {
+        "source": "https://build.nvidia.com/mistralai/mistral-large-4-1t-a52b",
+        "verifiedAt": "2026-11-08T21:35:37.329Z"
+      }
+    },
+    {
+      "provider": "nvidia",
+      "modelId": "nvidia/ising-calibration-1.5-31b",
+      "contextWindow": 262144,
+      "provenance": {
+        "source": "https://build.nvidia.com/nvidia/ising-calibration-1.5-31b",
+        "verifiedAt": "2026-11-08T21:35:37.329Z"
+      }
+    },
+    {
+      "provider": "nvidia",
+      "modelId": "nvidia/llama-nemotron-embed-vl-1b-v2",
+      "contextWindow": 16384,
+      "provenance": {
+        "source": "https://build.nvidia.com/nvidia/llama-nemotron-embed-vl-1b-v2",
+        "verifiedAt": "2026-11-08T21:35:37.329Z"
+      }
+    },
+    {
+      "provider": "nvidia",
+      "modelId": "nvidia/nemotron-3-embed-1b",
+      "contextWindow": 32768,
+      "provenance": {
+        "source": "https://build.nvidia.com/nvidia/nemotron-3-embed-1b",
+        "verifiedAt": "2026-11-08T21:35:37.329Z"
+      }
+    },
+    {
+      "provider": "nvidia",
+      "modelId": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "contextWindow": 262144,
+      "provenance": {
+        "source": "https://build.nvidia.com/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "verifiedAt": "2026-11-08T21:35:37.329Z"
+      }
+    },
+    {
+      "provider": "nvidia",
+      "modelId": "nvidia/nemotron-3-super-120b-a12b",
+      "contextWindow": 1048576,
+      "provenance": {
+        "source": "https://build.nvidia.com/nvidia/nemotron-3-super-120b-a12b",
+        "verifiedAt": "2026-11-08T21:35:37.329Z"
+      }
+    },
+    {
+      "provider": "nvidia",
+      "modelId": "nvidia/nemotron-3-ultra-550b-a55b",
+      "contextWindow": 1048576,
+      "provenance": {
+        "source": "https://build.nvidia.com/nvidia/nemotron-3-ultra-550b-a55b",
+        "verifiedAt": "2026-11-08T21:35:37.329Z"
+      }
+    },
+    {
+      "provider": "nvidia",
+      "modelId": "nvidia/nemotron-3.5-bolt-e4b",
+      "contextWindow": 65536,
+      "provenance": {
+        "source": "https://build.nvidia.com/nvidia/nemotron-3.5-bolt-e4b",
+        "verifiedAt": "2026-11-08T21:35:37.329Z"
+      }
+    },
+    {
+      "provider": "nvidia",
+      "modelId": "nvidia/nemotron-3.5-content-safety",
+      "contextWindow": 131072,
+      "provenance": {
+        "source": "https://build.nvidia.com/nvidia/nemotron-3.5-content-safety",
+        "verifiedAt": "2026-11-08T21:35:37.329Z"
+      }
+    },
+    {
+      "provider": "nvidia",
+      "modelId": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "contextWindow": 1048576,
+      "provenance": {
+        "source": "https://build.nvidia.com/nvidia/nemotron-3.5-lightning-30b-a3b",
+        "verifiedAt": "2026-11-08T21:35:37.329Z"
+      }
+    },
+    {
+      "provider": "nvidia",
+      "modelId": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "contextWindow": 262144,
+      "provenance": {
+        "source": "https://build.nvidia.com/nvidia/nemotron-3.5-super-vl-120b-a12b",
+        "verifiedAt": "2026-11-08T21:35:37.329Z"
+      }
+    },
+    {
+      "provider": "nvidia",
+      "modelId": "nvidia/nemotron-parse-2.0",
+      "contextWindow": 9000,
+      "provenance": {
+        "source": "https://build.nvidia.com/nvidia/nemotron-parse-2.0",
+        "verifiedAt": "2026-11-08T21:35:37.329Z"
+      }
+    },
+    {
+      "provider": "nvidia",
+      "modelId": "openai/gpt-oss-20b",
+      "contextWindow": 131072,
+      "provenance": {
+        "source": "https://build.nvidia.com/openai/gpt-oss-20b",
+        "verifiedAt": "2026-11-08T21:35:37.329Z"
+      }
+    },
+    {
+      "provider": "nvidia",
+      "modelId": "poolside/laguna-xs-2.1",
+      "contextWindow": 262144,
+      "provenance": {
+        "source": "https://build.nvidia.com/poolside/laguna-xs-2.1",
+        "verifiedAt": "2026-11-08T21:35:37.329Z"
+      }
+    },
+    {
+      "provider": "nvidia",
+      "modelId": "stepfun-ai/step-5-preview",
+      "contextWindow": 1048576,
+      "provenance": {
+        "source": "https://build.nvidia.com/stepfun-ai/step-5-preview",
+        "verifiedAt": "2026-11-08T21:35:37.329Z"
       }
     }
   ]
