@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "registryVersion": "2026-11-08.1",
-  "generatedAt": "2026-11-08T21:35:37.329Z",
+  "registryVersion": "2026-11-10.1",
+  "generatedAt": "2026-11-10T01:40:00.000Z",
   "entries": [
     {
       "provider": "openai",
@@ -14,6 +14,66 @@
       "provenance": {
         "source": "https://developers.openai.com/api/docs/models/gpt-5.4",
         "verifiedAt": "2026-08-02T03:47:00.000Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-5-nano",
+      "contextWindow": 400000,
+      "maxOutputTokens": 128000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-5-nano",
+        "verifiedAt": "2026-11-10T01:40:00.000Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-5-mini",
+      "contextWindow": 400000,
+      "maxOutputTokens": 128000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-5-mini",
+        "verifiedAt": "2026-11-10T01:40:00.000Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-5.4-mini",
+      "contextWindow": 400000,
+      "maxOutputTokens": 128000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "verifiedAt": "2026-11-10T01:40:00.000Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-5.4-nano",
+      "contextWindow": 400000,
+      "maxOutputTokens": 128000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.4-nano",
+        "verifiedAt": "2026-11-10T01:40:00.000Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-4.1-mini",
+      "contextWindow": 1047576,
+      "maxOutputTokens": 32768,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+        "verifiedAt": "2026-11-10T01:40:00.000Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-4o-mini",
+      "contextWindow": 128000,
+      "maxOutputTokens": 16384,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+        "verifiedAt": "2026-11-10T01:40:00.000Z"
       }
     },
     {
