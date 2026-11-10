@@ -130,3 +130,38 @@ test("the version counts up within a day and starts at 1 on a new day", () => {
   assert.equal(nextRegistryVersion("2026-08-02.2", NOW), "2026-11-09.1");
   assert.equal(nextRegistryVersion(undefined, NOW), "2026-11-09.1");
 });
+
+import { openAiModelPageUrl, readOpenAiPageLimits } from "./openai-docs-catalog.mjs";
+import { mergePageEntries, PAGE_SOURCES } from "./registry.mjs";
+
+const slot = (template, count) => `<span data-catalogue-template="${template}"><span data-catalogue-slot="count">${count}</span> x</span>`;
+
+test("an OpenAI page gives its context window and max output, as written on developers.openai.com", () => {
+  const html = `<div>${slot("{count} context window", "400,000")}${slot("{count} max output tokens", "128,000")}</div>`;
+  assert.deepEqual(readOpenAiPageLimits(html), { contextWindow: 400_000, maxOutputTokens: 128_000 });
+  assert.equal(readOpenAiPageLimits("<p>an image model page</p>"), null, "no size is ever guessed");
+  assert.equal(readOpenAiPageLimits(slot("{count} context window", "1") + slot("{count} context window", "2")), null, "two different sizes are not trusted");
+  assert.deepEqual(readOpenAiPageLimits(slot("{count} context window", "8,000") + slot("{count} max output tokens", "9,000")), { contextWindow: 8_000 }, "an output larger than the window is left out");
+});
+
+test("OpenAI entries are updated from their page, and never removed when the documentation drops a model", () => {
+  const now = new Date("2026-11-10T03:17:00.000Z");
+  const page = (id) => openAiModelPageUrl(id);
+  const entries = [
+    { provider: "openai", modelId: "old-model", contextWindow: 128_000, provenance: { source: page("old-model"), verifiedAt: "2026-01-01T00:00:00.000Z" } },
+    { provider: "openai", modelId: "same-model", contextWindow: 400_000, maxOutputTokens: 128_000, provenance: { source: page("same-model"), verifiedAt: "2026-01-01T00:00:00.000Z" } },
+    { provider: "openai", modelId: "hand-model", contextWindow: 1, provenance: { source: "written by a person", verifiedAt: "2026-01-01T00:00:00.000Z" } },
+  ];
+  const readings = new Map([
+    ["same-model", { kind: "size", contextWindow: 400_000, maxOutputTokens: 128_000 }],
+    ["new-model", { kind: "size", contextWindow: 1_050_000, maxOutputTokens: 128_000 }],
+    ["hand-model", { kind: "size", contextWindow: 999 }],
+  ]);
+  const { entries: merged, report } = mergePageEntries(entries, PAGE_SOURCES.openai, ["hand-model", "new-model", "same-model"], readings, now);
+  assert.deepEqual(report.added, [{ modelId: "new-model", contextWindow: 1_050_000 }]);
+  assert.deepEqual(report.removed, [], "a model missing from the documentation keeps its entry");
+  assert.ok(merged.some((entry) => entry.modelId === "old-model"));
+  assert.equal(merged.find((entry) => entry.modelId === "same-model").provenance.verifiedAt, "2026-01-01T00:00:00.000Z", "an unchanged model is not rewritten");
+  assert.equal(merged.find((entry) => entry.modelId === "hand-model").contextWindow, 1, "an entry a person wrote is never changed");
+  assert.equal(merged.find((entry) => entry.modelId === "new-model").maxOutputTokens, 128_000);
+});

@@ -1,4 +1,5 @@
 import { nvidiaModelPageUrl } from "./nvidia-build-catalog.mjs";
+import { openAiModelPageUrl } from "./openai-docs-catalog.mjs";
 
 /**
  * The rules Weehzi applies when it downloads this registry (packages/ai-providers/src/capabilities.ts,
@@ -76,13 +77,27 @@ export function checkRegistry(document) {
 }
 
 /**
- * An entry this job wrote: an NVIDIA entry for NVIDIA's hosted address whose source is exactly the build.nvidia.com
- * page of its own model. Every other entry was written by a person and is never changed by the job.
+ * The providers whose sizes this job reads from the provider's own site. An entry belongs to the job when it is for the
+ * provider's hosted address and its source is exactly its own model's page; every other entry was written by a person
+ * and is never changed by the job.
+ *
+ * `removeMissing`: whether a model that leaves the provider's list loses its entry. NVIDIA's list is its API model list,
+ * so a model missing from it can no longer be used. OpenAI's list is its documentation, which can drop an older model
+ * that still works in the API, so OpenAI entries are never removed by the job.
  */
-export function isNvidiaPageEntry(entry) {
-  return entry?.provider === "nvidia"
+export const PAGE_SOURCES = {
+  nvidia: { provider: "nvidia", pageUrl: nvidiaModelPageUrl, removeMissing: true },
+  openai: { provider: "openai", pageUrl: openAiModelPageUrl, removeMissing: false },
+};
+
+export function isPageEntry(source, entry) {
+  return entry?.provider === source.provider
     && entry.providerBaseUrl === undefined
-    && entry.provenance?.source === nvidiaModelPageUrl(entry.modelId);
+    && entry.provenance?.source === source.pageUrl(entry.modelId);
+}
+
+export function isNvidiaPageEntry(entry) {
+  return isPageEntry(PAGE_SOURCES.nvidia, entry);
 }
 
 /** `YYYY-MM-DD.N`: N counts up within one day and starts again at 1 on a new day. */
@@ -93,20 +108,21 @@ export function nextRegistryVersion(previousVersion, now) {
 }
 
 /**
- * The registry after one read of NVIDIA's site.
+ * The entries after one read of a provider's site.
  *
  * - Entries people wrote are kept exactly as they are, and a model a person already describes is not written again.
- * - A page that states a size gives the model an entry. When the size is the one already recorded, the entry is kept
- *   as it was (its `verifiedAt` is when that value was first read), so an unchanged day changes nothing.
- * - A page that fails, or that states no size, never removes a value already recorded: a change to NVIDIA's site must
- *   not wipe the registry. These are reported so a person can look.
- * - A model that has left NVIDIA's model list is removed.
+ * - A page that states a size gives the model an entry. When the limits are the ones already recorded, the entry is
+ *   kept as it was (its `verifiedAt` is when that value was first read), so an unchanged day changes nothing.
+ * - A page that fails, or that states no size, never removes a value already recorded: a change to the provider's site
+ *   must not wipe the registry. These are reported so a person can look.
+ * - A model that has left the provider's list is removed only when the source says so (`removeMissing`).
  */
-export function mergeNvidiaEntries(previous, modelIds, readings, now) {
-  const people = previous.entries.filter((entry) => !isNvidiaPageEntry(entry));
-  const recorded = new Map(previous.entries.filter(isNvidiaPageEntry).map((entry) => [entry.modelId, entry]));
+export function mergePageEntries(entries, source, modelIds, readings, now) {
+  const mine = (entry) => isPageEntry(source, entry);
+  const others = entries.filter((entry) => !mine(entry));
+  const recorded = new Map(entries.filter(mine).map((entry) => [entry.modelId, entry]));
   const describedByPeople = new Set(
-    people.filter((entry) => entry.provider === "nvidia" && entry.providerBaseUrl === undefined).flatMap((entry) => [entry.modelId, ...(entry.aliases ?? [])]),
+    others.filter((entry) => entry.provider === source.provider && entry.providerBaseUrl === undefined).flatMap((entry) => [entry.modelId, ...(entry.aliases ?? [])]),
   );
   const report = { added: [], changed: [], kept: [], removed: [], skipped: [] };
   const generated = [];
@@ -120,15 +136,17 @@ export function mergeNvidiaEntries(previous, modelIds, readings, now) {
     const reading = readings.get(modelId) ?? { kind: "failed", reason: "not read" };
     const before = recorded.get(modelId);
     if (reading.kind === "size") {
-      if (before?.contextWindow === reading.contextWindow) {
+      if (before?.contextWindow === reading.contextWindow && before?.maxOutputTokens === reading.maxOutputTokens) {
         generated.push(before);
         continue;
       }
       generated.push({
-        provider: "nvidia",
+        provider: source.provider,
         modelId,
         contextWindow: reading.contextWindow,
-        provenance: { source: nvidiaModelPageUrl(modelId), verifiedAt: now.toISOString() },
+        ...(reading.maxOutputTokens === undefined ? {} : { maxOutputTokens: reading.maxOutputTokens }),
+        ...(before?.aliases ? { aliases: before.aliases } : {}),
+        provenance: { source: source.pageUrl(modelId), verifiedAt: now.toISOString() },
       });
       if (before) report.changed.push({ modelId, from: before.contextWindow, to: reading.contextWindow });
       else report.added.push({ modelId, contextWindow: reading.contextWindow });
@@ -138,13 +156,30 @@ export function mergeNvidiaEntries(previous, modelIds, readings, now) {
     }
   }
   const listed = new Set(modelIds);
-  for (const modelId of recorded.keys()) if (!listed.has(modelId)) report.removed.push({ modelId });
+  for (const [modelId, entry] of recorded) {
+    if (listed.has(modelId)) continue;
+    if (source.removeMissing) report.removed.push({ modelId });
+    else generated.push(entry);
+  }
 
   generated.sort((a, b) => (a.modelId < b.modelId ? -1 : a.modelId > b.modelId ? 1 : 0));
-  const entries = [...people, ...generated];
+  // Each provider's entries stay together, in the place the provider's first entry had.
+  const firstIndex = entries.findIndex(mine);
+  const at = firstIndex < 0 ? others.length : entries.slice(0, firstIndex).filter((entry) => !mine(entry)).length;
+  return { entries: [...others.slice(0, at), ...generated, ...others.slice(at)], report };
+}
+
+/** The registry with new entries; unchanged (the same object) when the entries did not change. */
+export function withEntries(previous, entries, now) {
   const changed = JSON.stringify(entries) !== JSON.stringify(previous.entries);
   const document = changed
     ? { ...previous, registryVersion: nextRegistryVersion(previous.registryVersion, now), generatedAt: now.toISOString(), entries }
     : previous;
-  return { document, changed, report };
+  return { document, changed };
+}
+
+/** The registry after one read of NVIDIA's site (kept for the tests and anyone calling it by this name). */
+export function mergeNvidiaEntries(previous, modelIds, readings, now) {
+  const { entries, report } = mergePageEntries(previous.entries, PAGE_SOURCES.nvidia, modelIds, readings, now);
+  return { ...withEntries(previous, entries, now), report };
 }

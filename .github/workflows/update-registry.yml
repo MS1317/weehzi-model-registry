@@ -1,11 +1,12 @@
 name: Update registry
 
-# Reads the context sizes NVIDIA publishes on build.nvidia.com and publishes model-context-registry.json when one
-# changed. See scripts/update-registry.mjs. No secret is needed: NVIDIA's model list and pages are public.
+# Reads the context sizes NVIDIA publishes on build.nvidia.com and OpenAI publishes on developers.openai.com, and
+# publishes model-context-registry.json when one changed. See scripts/update-registry.mjs. No secret is needed: both
+# sites are public. It runs on GitHub's computers, so no PC has to be switched on.
 on:
   schedule:
-    # Every day at 03:17 UTC; GitHub delays jobs at the start of the hour, so the minute is not :00.
-    - cron: "17 3 * * *"
+    # Twice a day, at 03:17 and 15:17 UTC; GitHub delays jobs at the start of the hour, so the minute is not :00.
+    - cron: "17 3,15 * * *"
   workflow_dispatch:
 
 permissions:
@@ -30,7 +31,11 @@ jobs:
       - name: Test the update script
         run: node --test scripts/registry.test.mjs
 
-      - name: Read NVIDIA's model pages
+      # When one provider's site cannot be read, the script still writes the other provider's changes and then fails.
+      # The publish step runs either way, and the last step turns the run red so the problem is seen.
+      - name: Read NVIDIA's and OpenAI's model pages
+        id: read
+        continue-on-error: true
         run: node scripts/update-registry.mjs
 
       - name: Publish when the registry changed
@@ -44,7 +49,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if ! git diff --quiet -- model-context-registry.json; then
             git add model-context-registry.json
-            git commit -m "Update NVIDIA context sizes from build.nvidia.com"
+            git commit -m "Update context sizes from NVIDIA and OpenAI"
             git push
             # A push made with this job's own token does not start a Pages build, so the job asks for one.
             gh api --method POST "repos/${{ github.repository }}/pages/builds"
@@ -56,3 +61,9 @@ jobs:
             git commit --allow-empty -m "Keep the daily registry check active"
             git push
           fi
+
+      - name: Fail the run when a provider could not be read
+        if: steps.read.outcome == 'failure'
+        run: |
+          echo "A provider's site could not be read; see the step above. Anything that was read was still published."
+          exit 1
