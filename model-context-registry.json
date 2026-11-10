@@ -1,19 +1,276 @@
 {
   "schemaVersion": 1,
-  "registryVersion": "2026-11-10.1",
-  "generatedAt": "2026-11-10T01:40:00.000Z",
+  "registryVersion": "2026-11-10.2",
+  "generatedAt": "2026-11-10T03:11:26.931Z",
   "entries": [
     {
       "provider": "openai",
-      "modelId": "gpt-5.4",
-      "contextWindow": 1050000,
+      "modelId": "chat-latest",
+      "contextWindow": 400000,
       "maxOutputTokens": 128000,
-      "aliases": [
-        "gpt-5.4-2026-03-05"
-      ],
       "provenance": {
-        "source": "https://developers.openai.com/api/docs/models/gpt-5.4",
-        "verifiedAt": "2026-08-02T03:47:00.000Z"
+        "source": "https://developers.openai.com/api/docs/models/chat-latest",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "chatgpt-4o-latest",
+      "contextWindow": 128000,
+      "maxOutputTokens": 16384,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/chatgpt-4o-latest",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "codex-mini-latest",
+      "contextWindow": 200000,
+      "maxOutputTokens": 100000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/codex-mini-latest",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "computer-use-preview",
+      "contextWindow": 8192,
+      "maxOutputTokens": 1024,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/computer-use-preview",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-3.5-turbo",
+      "contextWindow": 16385,
+      "maxOutputTokens": 4096,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-3.5-turbo",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-4",
+      "contextWindow": 8192,
+      "maxOutputTokens": 8192,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-4",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-4-turbo",
+      "contextWindow": 128000,
+      "maxOutputTokens": 4096,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-4-turbo",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-4-turbo-preview",
+      "contextWindow": 128000,
+      "maxOutputTokens": 4096,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-4-turbo-preview",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-4.1",
+      "contextWindow": 1047576,
+      "maxOutputTokens": 32768,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-4.1",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-4.1-mini",
+      "contextWindow": 1047576,
+      "maxOutputTokens": 32768,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+        "verifiedAt": "2026-11-10T01:40:00.000Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-4.1-nano",
+      "contextWindow": 1047576,
+      "maxOutputTokens": 32768,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-4.1-nano",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-4.5-preview",
+      "contextWindow": 128000,
+      "maxOutputTokens": 16384,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-4.5-preview",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-4o",
+      "contextWindow": 128000,
+      "maxOutputTokens": 16384,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-4o",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-4o-audio-preview",
+      "contextWindow": 128000,
+      "maxOutputTokens": 16384,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-4o-audio-preview",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-4o-mini",
+      "contextWindow": 128000,
+      "maxOutputTokens": 16384,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+        "verifiedAt": "2026-11-10T01:40:00.000Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-4o-mini-audio-preview",
+      "contextWindow": 128000,
+      "maxOutputTokens": 16384,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-4o-mini-audio-preview",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-4o-mini-realtime-preview",
+      "contextWindow": 16000,
+      "maxOutputTokens": 4096,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-4o-mini-realtime-preview",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-4o-mini-search-preview",
+      "contextWindow": 128000,
+      "maxOutputTokens": 16384,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-4o-mini-search-preview",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-4o-mini-transcribe",
+      "contextWindow": 16000,
+      "maxOutputTokens": 2000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-4o-mini-transcribe",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-4o-realtime-preview",
+      "contextWindow": 32000,
+      "maxOutputTokens": 4096,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-4o-realtime-preview",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-4o-search-preview",
+      "contextWindow": 128000,
+      "maxOutputTokens": 16384,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-4o-search-preview",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-4o-transcribe",
+      "contextWindow": 16000,
+      "maxOutputTokens": 2000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-4o-transcribe",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-4o-transcribe-diarize",
+      "contextWindow": 16000,
+      "maxOutputTokens": 2000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-4o-transcribe-diarize",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-5",
+      "contextWindow": 400000,
+      "maxOutputTokens": 128000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-5",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-5-chat-latest",
+      "contextWindow": 128000,
+      "maxOutputTokens": 16384,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-5-chat-latest",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-5-codex",
+      "contextWindow": 400000,
+      "maxOutputTokens": 128000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-5-codex",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-5-mini",
+      "contextWindow": 400000,
+      "maxOutputTokens": 128000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-5-mini",
+        "verifiedAt": "2026-11-10T01:40:00.000Z"
       }
     },
     {
@@ -28,12 +285,135 @@
     },
     {
       "provider": "openai",
-      "modelId": "gpt-5-mini",
+      "modelId": "gpt-5-pro",
+      "contextWindow": 400000,
+      "maxOutputTokens": 272000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-5-pro",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-5.1",
       "contextWindow": 400000,
       "maxOutputTokens": 128000,
       "provenance": {
-        "source": "https://developers.openai.com/api/docs/models/gpt-5-mini",
-        "verifiedAt": "2026-11-10T01:40:00.000Z"
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.1",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-5.1-chat-latest",
+      "contextWindow": 128000,
+      "maxOutputTokens": 16384,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.1-chat-latest",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-5.1-codex",
+      "contextWindow": 400000,
+      "maxOutputTokens": 128000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.1-codex",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-5.1-codex-max",
+      "contextWindow": 400000,
+      "maxOutputTokens": 128000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.1-codex-max",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-5.1-codex-mini",
+      "contextWindow": 400000,
+      "maxOutputTokens": 128000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.1-codex-mini",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-5.2",
+      "contextWindow": 400000,
+      "maxOutputTokens": 128000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.2",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-5.2-chat-latest",
+      "contextWindow": 128000,
+      "maxOutputTokens": 16384,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.2-chat-latest",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-5.2-codex",
+      "contextWindow": 400000,
+      "maxOutputTokens": 128000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.2-codex",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-5.2-pro",
+      "contextWindow": 400000,
+      "maxOutputTokens": 128000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.2-pro",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-5.3-chat-latest",
+      "contextWindow": 128000,
+      "maxOutputTokens": 16384,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.3-chat-latest",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-5.3-codex",
+      "contextWindow": 400000,
+      "maxOutputTokens": 128000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.3-codex",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-5.4",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "aliases": [
+        "gpt-5.4-2026-03-05"
+      ],
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.4",
+        "verifiedAt": "2026-08-02T03:47:00.000Z"
       }
     },
     {
@@ -58,22 +438,382 @@
     },
     {
       "provider": "openai",
-      "modelId": "gpt-4.1-mini",
-      "contextWindow": 1047576,
-      "maxOutputTokens": 32768,
+      "modelId": "gpt-5.4-pro",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
       "provenance": {
-        "source": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
-        "verifiedAt": "2026-11-10T01:40:00.000Z"
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.4-pro",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
       }
     },
     {
       "provider": "openai",
-      "modelId": "gpt-4o-mini",
+      "modelId": "gpt-5.5",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.5",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-5.5-pro",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.5-pro",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-5.6-cyber",
+      "contextWindow": 400000,
+      "maxOutputTokens": 128000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.6-cyber",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-5.6-luna",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.6-luna",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-5.6-sol",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.6-sol",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-5.6-terra",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-6-astra",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-6-cyber",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-6-cyber",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-6-luna",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-6-sol",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-6-sol",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-6.1-sol",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-6.1-terra",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-6.1-terra",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-audio",
       "contextWindow": 128000,
       "maxOutputTokens": 16384,
       "provenance": {
-        "source": "https://developers.openai.com/api/docs/models/gpt-4o-mini",
-        "verifiedAt": "2026-11-10T01:40:00.000Z"
+        "source": "https://developers.openai.com/api/docs/models/gpt-audio",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-audio-1.5",
+      "contextWindow": 128000,
+      "maxOutputTokens": 16384,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-audio-1.5",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-audio-mini",
+      "contextWindow": 128000,
+      "maxOutputTokens": 16384,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-audio-mini",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-daybreak-blue-latest",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-daybreak-blue-latest",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-daybreak-red-latest",
+      "contextWindow": 400000,
+      "maxOutputTokens": 128000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-daybreak-red-latest",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-oss-120b",
+      "contextWindow": 131072,
+      "maxOutputTokens": 131072,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-oss-120b",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-oss-20b",
+      "contextWindow": 131072,
+      "maxOutputTokens": 131072,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-oss-20b",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-realtime",
+      "contextWindow": 32000,
+      "maxOutputTokens": 4096,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-realtime",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-realtime-1.5",
+      "contextWindow": 32000,
+      "maxOutputTokens": 4096,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-realtime-1.5",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-realtime-2",
+      "contextWindow": 128000,
+      "maxOutputTokens": 32000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-realtime-2",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-realtime-2.1",
+      "contextWindow": 128000,
+      "maxOutputTokens": 32000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-realtime-2.1",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-realtime-2.1-mini",
+      "contextWindow": 128000,
+      "maxOutputTokens": 32000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-realtime-2.1-mini",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-realtime-mini",
+      "contextWindow": 32000,
+      "maxOutputTokens": 4096,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-realtime-mini",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-realtime-translate",
+      "contextWindow": 16000,
+      "maxOutputTokens": 2000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-realtime-translate",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-realtime-whisper",
+      "contextWindow": 16000,
+      "maxOutputTokens": 2000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-realtime-whisper",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "o1",
+      "contextWindow": 200000,
+      "maxOutputTokens": 100000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/o1",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "o1-mini",
+      "contextWindow": 128000,
+      "maxOutputTokens": 65536,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/o1-mini",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "o1-preview",
+      "contextWindow": 128000,
+      "maxOutputTokens": 32768,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/o1-preview",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "o1-pro",
+      "contextWindow": 200000,
+      "maxOutputTokens": 100000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/o1-pro",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "o3",
+      "contextWindow": 200000,
+      "maxOutputTokens": 100000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/o3",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "o3-deep-research",
+      "contextWindow": 200000,
+      "maxOutputTokens": 100000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/o3-deep-research",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "o3-mini",
+      "contextWindow": 200000,
+      "maxOutputTokens": 100000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/o3-mini",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "o3-pro",
+      "contextWindow": 200000,
+      "maxOutputTokens": 100000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/o3-pro",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "o4-mini",
+      "contextWindow": 200000,
+      "maxOutputTokens": 100000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/o4-mini",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "o4-mini-deep-research",
+      "contextWindow": 200000,
+      "maxOutputTokens": 100000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/o4-mini-deep-research",
+        "verifiedAt": "2026-11-10T03:11:26.931Z"
       }
     },
     {
