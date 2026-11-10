@@ -32,7 +32,7 @@ How the job decides:
 - A page that fails, or that stops stating a size, never removes a recorded value. A change to NVIDIA's site must not wipe the registry. The job lists these in its run summary so a person can look.
 - A model that leaves NVIDIA's model list is removed.
 - When none of a provider's pages give a size, that provider is left as it was, the other provider is still updated and published, and the run fails, so the problem shows up as a red run. When the result would not pass Weehzi's checks, the job writes nothing.
-- A push made with a job's own token does not rebuild the Pages site, so after a change the job asks GitHub for a Pages build.
+- The job's push normally rebuilds the Pages site by itself. The job asks GitHub for a Pages build only when, 30 seconds after the push, no build for that commit has started (asking every time started a duplicate build that was reported as failed).
 - GitHub switches off a public repository's scheduled job after 60 days without activity. When nothing has changed for 45 days, the job makes an empty commit so the daily check keeps running.
 
 To run it by hand: `node scripts/update-registry.mjs --dry-run` reads and reports without writing; without `--dry-run` it writes the file. `node --test scripts/registry.test.mjs` runs its tests. It needs Node.js 22 or newer and no key.

@@ -51,8 +51,12 @@ jobs:
             git add model-context-registry.json
             git commit -m "Update context sizes from NVIDIA and OpenAI"
             git push
-            # A push made with this job's own token does not start a Pages build, so the job asks for one.
-            gh api --method POST "repos/${{ github.repository }}/pages/builds"
+            # The push normally starts a Pages build by itself (seen on 2026-11-10: asking as well started a second
+            # build that was cancelled and reported as failed). Ask only when no build for this commit has started.
+            sleep 30
+            commit=$(git rev-parse HEAD)
+            started=$(gh api "repos/${{ github.repository }}/pages/builds" --jq "[.[] | select(.commit == \"$commit\")] | length")
+            if [ "$started" = "0" ]; then gh api --method POST "repos/${{ github.repository }}/pages/builds"; fi
             exit 0
           fi
           echo "No change to publish."
