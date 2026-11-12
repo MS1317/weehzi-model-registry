@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "registryVersion": "2026-11-10.2",
-  "generatedAt": "2026-11-10T03:11:26.931Z",
+  "registryVersion": "2026-11-12.1",
+  "generatedAt": "2026-11-12T11:27:13.946Z",
   "entries": [
     {
       "provider": "openai",
@@ -831,15 +831,6 @@
       "contextWindow": 1048576,
       "provenance": {
         "source": "https://build.nvidia.com/deepseek-ai/deepseek-v4.1-flash",
-        "verifiedAt": "2026-11-08T21:35:37.329Z"
-      }
-    },
-    {
-      "provider": "nvidia",
-      "modelId": "google/diffusiongemma-26b-a4b-it",
-      "contextWindow": 262144,
-      "provenance": {
-        "source": "https://build.nvidia.com/google/diffusiongemma-26b-a4b-it",
         "verifiedAt": "2026-11-08T21:35:37.329Z"
       }
     },
