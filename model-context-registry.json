@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "registryVersion": "2026-11-12.1",
-  "generatedAt": "2026-11-12T11:27:13.946Z",
+  "registryVersion": "2026-11-16.1",
+  "generatedAt": "2026-11-16T11:37:58.253Z",
   "entries": [
     {
       "provider": "openai",
@@ -818,15 +818,6 @@
     },
     {
       "provider": "nvidia",
-      "modelId": "adept/fuyu-8b",
-      "contextWindow": 16384,
-      "provenance": {
-        "source": "https://build.nvidia.com/adept/fuyu-8b",
-        "verifiedAt": "2026-11-08T21:35:37.329Z"
-      }
-    },
-    {
-      "provider": "nvidia",
       "modelId": "deepseek-ai/deepseek-v4.1-flash",
       "contextWindow": 1048576,
       "provenance": {
@@ -845,37 +836,10 @@
     },
     {
       "provider": "nvidia",
-      "modelId": "meta/llama-3.2-90b-vision-instruct",
-      "contextWindow": 131072,
-      "provenance": {
-        "source": "https://build.nvidia.com/meta/llama-3.2-90b-vision-instruct",
-        "verifiedAt": "2026-11-08T21:35:37.329Z"
-      }
-    },
-    {
-      "provider": "nvidia",
-      "modelId": "meta/llama-guard-4-12b",
-      "contextWindow": 163840,
-      "provenance": {
-        "source": "https://build.nvidia.com/meta/llama-guard-4-12b",
-        "verifiedAt": "2026-11-08T21:35:37.329Z"
-      }
-    },
-    {
-      "provider": "nvidia",
       "modelId": "meta/muse-glimmer-30b",
       "contextWindow": 131072,
       "provenance": {
         "source": "https://build.nvidia.com/meta/muse-glimmer-30b",
-        "verifiedAt": "2026-11-08T21:35:37.329Z"
-      }
-    },
-    {
-      "provider": "nvidia",
-      "modelId": "microsoft/phi-3-vision-128k-instruct",
-      "contextWindow": 131072,
-      "provenance": {
-        "source": "https://build.nvidia.com/microsoft/phi-3-vision-128k-instruct",
         "verifiedAt": "2026-11-08T21:35:37.329Z"
       }
     },
@@ -908,15 +872,6 @@
     },
     {
       "provider": "nvidia",
-      "modelId": "nvidia/llama-nemotron-embed-vl-1b-v2",
-      "contextWindow": 16384,
-      "provenance": {
-        "source": "https://build.nvidia.com/nvidia/llama-nemotron-embed-vl-1b-v2",
-        "verifiedAt": "2026-11-08T21:35:37.329Z"
-      }
-    },
-    {
-      "provider": "nvidia",
       "modelId": "nvidia/nemotron-3-embed-1b",
       "contextWindow": 32768,
       "provenance": {
@@ -930,15 +885,6 @@
       "contextWindow": 262144,
       "provenance": {
         "source": "https://build.nvidia.com/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
-        "verifiedAt": "2026-11-08T21:35:37.329Z"
-      }
-    },
-    {
-      "provider": "nvidia",
-      "modelId": "nvidia/nemotron-3-super-120b-a12b",
-      "contextWindow": 1048576,
-      "provenance": {
-        "source": "https://build.nvidia.com/nvidia/nemotron-3-super-120b-a12b",
         "verifiedAt": "2026-11-08T21:35:37.329Z"
       }
     },
@@ -984,15 +930,6 @@
       "contextWindow": 262144,
       "provenance": {
         "source": "https://build.nvidia.com/nvidia/nemotron-3.5-super-vl-120b-a12b",
-        "verifiedAt": "2026-11-08T21:35:37.329Z"
-      }
-    },
-    {
-      "provider": "nvidia",
-      "modelId": "nvidia/nemotron-parse-2.0",
-      "contextWindow": 9000,
-      "provenance": {
-        "source": "https://build.nvidia.com/nvidia/nemotron-parse-2.0",
         "verifiedAt": "2026-11-08T21:35:37.329Z"
       }
     },
