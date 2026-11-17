@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "registryVersion": "2026-11-17.1",
-  "generatedAt": "2026-11-17T12:00:45.257Z",
+  "registryVersion": "2026-11-17.2",
+  "generatedAt": "2026-11-17T22:57:40.379Z",
   "entries": [
     {
       "provider": "openai",
@@ -564,6 +564,26 @@
       "provenance": {
         "source": "https://developers.openai.com/api/docs/models/gpt-6.1-terra",
         "verifiedAt": "2026-11-10T03:11:26.931Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-6.2-astra",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-6.2-astra",
+        "verifiedAt": "2026-11-17T22:57:40.379Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-6.2-sol",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-6.2-sol",
+        "verifiedAt": "2026-11-17T22:57:40.379Z"
       }
     },
     {

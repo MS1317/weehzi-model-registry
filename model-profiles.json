@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-17T06:13:18.029Z",
+  "generatedAt": "2026-11-17T22:57:48.577Z",
   "entries": [
     {
       "provider": "anthropic",
@@ -2956,7 +2956,7 @@
       "profile": {
         "name": "Chat Latest",
         "summary": "Latest Instant model used in ChatGPT",
-        "description": "chat-latest points to the latest Instant model currently used in ChatGPT. We recommend leveraging GPT-6 Astra for production API usage. Learn more on the Model guidance page. The underlying model snapshot will be regularly updated.",
+        "description": "chat-latest points to the latest Instant model currently used in ChatGPT. We recommend leveraging GPT-6.2 Astra for production API usage. Learn more on the Model guidance page. The underlying model snapshot will be regularly updated.",
         "inputModalities": [
           "text",
           "image"
@@ -2987,7 +2987,7 @@
       },
       "provenance": {
         "source": "https://developers.openai.com/api/docs/models/chat-latest",
-        "readAt": "2026-11-17T06:13:18.029Z"
+        "readAt": "2026-11-17T22:57:48.577Z"
       }
     },
     {
@@ -2996,7 +2996,7 @@
       "profile": {
         "name": "ChatGPT-4o",
         "summary": "GPT-4o model used in ChatGPT",
-        "description": "ChatGPT-4o was a model alias for the GPT-4o snapshot used in ChatGPT. It has been deprecated and removed from the API. We recommend using GPT-6 Astra for most API integrations.",
+        "description": "ChatGPT-4o was a model alias for the GPT-4o snapshot used in ChatGPT. It has been deprecated and removed from the API. We recommend using GPT-6.2 Astra for most API integrations.",
         "inputModalities": [
           "text",
           "image"
@@ -3021,7 +3021,7 @@
       },
       "provenance": {
         "source": "https://developers.openai.com/api/docs/models/chatgpt-4o-latest",
-        "readAt": "2026-11-17T06:13:18.029Z"
+        "readAt": "2026-11-17T22:57:48.577Z"
       }
     },
     {
@@ -3867,7 +3867,7 @@
       "profile": {
         "name": "GPT-5",
         "summary": "Previous intelligent reasoning model for coding and agentic tasks with configurable reasoning effort",
-        "description": "GPT-5 is our previous model for coding, reasoning, and agentic tasks across domains. We recommend using the latest GPT-6 Astra. Learn more on the Model guidance page. Reasoning.effort supports: minimal, low, medium, and high.",
+        "description": "GPT-5 is our previous model for coding, reasoning, and agentic tasks across domains. We recommend using the latest GPT-6.2 Astra. Learn more on the Model guidance page. Reasoning.effort supports: minimal, low, medium, and high.",
         "inputModalities": [
           "text",
           "image"
@@ -3904,7 +3904,7 @@
       },
       "provenance": {
         "source": "https://developers.openai.com/api/docs/models/gpt-5",
-        "readAt": "2026-11-17T06:13:18.029Z"
+        "readAt": "2026-11-17T22:57:48.577Z"
       }
     },
     {
@@ -3991,7 +3991,7 @@
       "profile": {
         "name": "GPT-5 mini",
         "summary": "Strong intelligence for cost sensitive, low latency, high volume workloads",
-        "description": "GPT-5 mini is a faster, more cost-efficient version of GPT-5. It's great for well-defined tasks and precise prompts. For most new low-latency, high-volume workloads, we recommend starting with GPT-5.6 Terra.",
+        "description": "GPT-5 mini is a faster, more cost-efficient version of GPT-5. It's great for well-defined tasks and precise prompts. For most new low-latency, high-volume workloads, we recommend starting with GPT-6.1 Terra.",
         "inputModalities": [
           "text",
           "image"
@@ -4026,7 +4026,7 @@
       },
       "provenance": {
         "source": "https://developers.openai.com/api/docs/models/gpt-5-mini",
-        "readAt": "2026-11-17T06:13:18.029Z"
+        "readAt": "2026-11-17T22:57:48.577Z"
       }
     },
     {
@@ -4035,7 +4035,7 @@
       "profile": {
         "name": "GPT-5 nano",
         "summary": "Fastest, most cost-efficient version of GPT-5",
-        "description": "GPT-5 nano is our fastest, cheapest version of GPT-5. It's great for summarization and classification tasks. For most new speed- and cost-sensitive workloads, we recommend starting with GPT-5.6 Luna. Learn more in our Model guidance page.",
+        "description": "GPT-5 nano is our fastest, cheapest version of GPT-5. It's great for summarization and classification tasks. For most new speed- and cost-sensitive workloads, we recommend starting with GPT-6 Luna. Learn more in our Model guidance page.",
         "inputModalities": [
           "text",
           "image"
@@ -4071,7 +4071,7 @@
       },
       "provenance": {
         "source": "https://developers.openai.com/api/docs/models/gpt-5-nano",
-        "readAt": "2026-11-17T06:13:18.029Z"
+        "readAt": "2026-11-17T22:57:48.577Z"
       }
     },
     {
@@ -4171,7 +4171,7 @@
       "profile": {
         "name": "GPT-5.1 Chat",
         "summary": "GPT-5.1 model used in ChatGPT",
-        "description": "GPT-5.1 Chat points to the GPT-5.1 snapshot currently used in ChatGPT. We recommend GPT-6 Astra for most API usage, but feel free to use this GPT-5.1 Chat model to test our latest improvements for chat use cases.",
+        "description": "GPT-5.1 Chat points to the GPT-5.1 snapshot currently used in ChatGPT. We recommend GPT-6.2 Astra for most API usage, but feel free to use this GPT-5.1 Chat model to test our latest improvements for chat use cases.",
         "inputModalities": [
           "text",
           "image"
@@ -4202,7 +4202,7 @@
       },
       "provenance": {
         "source": "https://developers.openai.com/api/docs/models/gpt-5.1-chat-latest",
-        "readAt": "2026-11-17T06:13:18.029Z"
+        "readAt": "2026-11-17T22:57:48.577Z"
       }
     },
     {
@@ -4327,7 +4327,7 @@
       "profile": {
         "name": "GPT-5.2",
         "summary": "Previous flagship model for professional work with configurable reasoning effort",
-        "description": "GPT-5.2 is our previous flagship model for complex professional work. We recommend using the latest GPT-6 Astra. Learn more on the Model guidance page. Reasoning.effort supports: none (default), low, medium, high and xhigh.",
+        "description": "GPT-5.2 is our previous flagship model for complex professional work. We recommend using the latest GPT-6.2 Astra. Learn more on the Model guidance page. Reasoning.effort supports: none (default), low, medium, high and xhigh.",
         "inputModalities": [
           "text",
           "image"
@@ -4364,7 +4364,7 @@
       },
       "provenance": {
         "source": "https://developers.openai.com/api/docs/models/gpt-5.2",
-        "readAt": "2026-11-17T06:13:18.029Z"
+        "readAt": "2026-11-17T22:57:48.577Z"
       }
     },
     {
@@ -4373,7 +4373,7 @@
       "profile": {
         "name": "GPT-5.2 Chat",
         "summary": "GPT-5.2 model used in ChatGPT",
-        "description": "GPT-5.2 Chat points to the GPT-5.2 snapshot used in ChatGPT. This model has been deprecated. We recommend GPT-6 Astra for most API usage.",
+        "description": "GPT-5.2 Chat points to the GPT-5.2 snapshot used in ChatGPT. This model has been deprecated. We recommend GPT-6.2 Astra for most API usage.",
         "inputModalities": [
           "text",
           "image"
@@ -4404,7 +4404,7 @@
       },
       "provenance": {
         "source": "https://developers.openai.com/api/docs/models/gpt-5.2-chat-latest",
-        "readAt": "2026-11-17T06:13:18.029Z"
+        "readAt": "2026-11-17T22:57:48.577Z"
       }
     },
     {
@@ -4492,7 +4492,7 @@
       "profile": {
         "name": "GPT-5.3 Chat",
         "summary": "GPT-5.3 Instant model used in ChatGPT",
-        "description": "GPT-5.3 Chat points to the GPT-5.3 Instant snapshot used in ChatGPT. This model has been deprecated. We recommend GPT-6 Astra for most API usage.",
+        "description": "GPT-5.3 Chat points to the GPT-5.3 Instant snapshot used in ChatGPT. This model has been deprecated. We recommend GPT-6.2 Astra for most API usage.",
         "inputModalities": [
           "text",
           "image"
@@ -4523,7 +4523,7 @@
       },
       "provenance": {
         "source": "https://developers.openai.com/api/docs/models/gpt-5.3-chat-latest",
-        "readAt": "2026-11-17T06:13:18.029Z"
+        "readAt": "2026-11-17T22:57:48.577Z"
       }
     },
     {
@@ -5038,8 +5038,8 @@
       "modelId": "gpt-6-astra",
       "profile": {
         "name": "GPT-6 Astra",
-        "summary": "Our most capable model for the most demanding work.",
-        "description": "GPT-6 Astra is our most capable model for the most demanding work. Use it for complex reasoning, coding, computer use, research, and document creation. reasoning.effort supports low, medium, high, xhigh, and max.",
+        "summary": "A reasoning model for complex coding and professional work.",
+        "description": "Use GPT-6 Astra for complex reasoning, coding, computer use, research, and document creation. reasoning.effort supports low, medium, high, xhigh, and max.",
         "inputModalities": [
           "text",
           "image"
@@ -5077,7 +5077,7 @@
       },
       "provenance": {
         "source": "https://developers.openai.com/api/docs/models/gpt-6-astra",
-        "readAt": "2026-11-17T06:13:18.029Z"
+        "readAt": "2026-11-17T22:57:48.577Z"
       }
     },
     {
@@ -5311,6 +5311,100 @@
       "provenance": {
         "source": "https://developers.openai.com/api/docs/models/gpt-6.1-terra",
         "readAt": "2026-11-17T06:13:18.029Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-6.2-astra",
+      "profile": {
+        "name": "GPT-6.2 Astra",
+        "summary": "Our most capable model for your hardest projects, from start to finish.",
+        "description": "GPT-6.2 Astra can build and revise software, use a computer, and work with documents. It accepts text and images and responds with text. In the Responses API, use the Multi-agent beta to delegate work to subagents.",
+        "inputModalities": [
+          "text",
+          "image"
+        ],
+        "outputModalities": [
+          "text"
+        ],
+        "contextWindow": 1050000,
+        "maxOutputTokens": 128000,
+        "knowledgeCutoff": "May 18, 2026",
+        "reasoning": true,
+        "toolCalling": true,
+        "structuredOutput": true,
+        "features": [
+          "streaming",
+          "structured_outputs",
+          "function_calling",
+          "file_search",
+          "image_input",
+          "web_search",
+          "prompt_caching",
+          "image_generation",
+          "code_interpreter",
+          "hosted_shell",
+          "apply_patch",
+          "skills",
+          "computer_use",
+          "mcp",
+          "tool_search"
+        ],
+        "price": {
+          "inputPerMillion": 8,
+          "outputPerMillion": 40
+        }
+      },
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-6.2-astra",
+        "readAt": "2026-11-17T22:57:48.577Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-6.2-sol",
+      "profile": {
+        "name": "GPT-6.2 Sol",
+        "summary": "Our go-to model for everyday work, from coding to powering agents at scale.",
+        "description": "GPT-6.2 Sol accepts text and image inputs and produces text. Use it with the Responses API to call tools such as web search and computer use, or to delegate work to subagents with the Multi-agent beta.",
+        "inputModalities": [
+          "text",
+          "image"
+        ],
+        "outputModalities": [
+          "text"
+        ],
+        "contextWindow": 1050000,
+        "maxOutputTokens": 128000,
+        "knowledgeCutoff": "Jun 01, 2026",
+        "reasoning": true,
+        "toolCalling": true,
+        "structuredOutput": true,
+        "features": [
+          "streaming",
+          "structured_outputs",
+          "function_calling",
+          "file_search",
+          "image_input",
+          "web_search",
+          "prompt_caching",
+          "image_generation",
+          "code_interpreter",
+          "hosted_shell",
+          "apply_patch",
+          "skills",
+          "computer_use",
+          "mcp",
+          "tool_search"
+        ],
+        "price": {
+          "inputPerMillion": 2,
+          "outputPerMillion": 10
+        }
+      },
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-6.2-sol",
+        "readAt": "2026-11-17T22:57:48.577Z"
       }
     },
     {
