@@ -40,8 +40,14 @@ export function readNvidiaPageContextWindow(body, modelId, contentType) {
 }
 
 function readJsonRows(body) {
+  return readPageRows(body).values;
+}
+
+/** Every row of the page's data: the JSON rows as values, and the text rows (the model card is one) as strings. */
+export function readPageRows(body) {
   const decoder = new TextDecoder();
   const values = [];
+  const texts = [];
   let at = 0;
   while (at < body.length) {
     const colon = body.indexOf(COLON, at);
@@ -50,6 +56,7 @@ function readJsonRows(body) {
       const comma = body.indexOf(COMMA, colon);
       const length = comma < 0 ? Number.NaN : Number.parseInt(decoder.decode(body.subarray(colon + 2, comma)), 16);
       if (!Number.isSafeInteger(length) || length < 0) break;
+      texts.push(decoder.decode(body.subarray(comma + 1, comma + 1 + length)));
       at = comma + 1 + length;
       continue;
     }
@@ -62,7 +69,7 @@ function readJsonRows(body) {
     }
     at = rowEnd + 1;
   }
-  return values;
+  return { values, texts };
 }
 
 function collectContextLengths(value, artifactName, sizes) {

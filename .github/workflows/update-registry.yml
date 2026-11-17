@@ -1,8 +1,10 @@
 name: Update registry
 
 # Reads the context sizes NVIDIA publishes on build.nvidia.com and OpenAI publishes on developers.openai.com, and
-# publishes model-context-registry.json when one changed. See scripts/update-registry.mjs. No secret is needed: both
-# sites are public. It runs on GitHub's computers, so no PC has to be switched on.
+# publishes model-context-registry.json when one changed (scripts/update-registry.mjs). It also reads what NVIDIA,
+# OpenAI, Anthropic, Google and Ollama say about each model on their own sites and publishes model-profiles.json
+# (scripts/update-profiles.mjs). No secret is needed: every source is public. It runs on GitHub's computers, so no PC
+# has to be switched on.
 on:
   schedule:
     # Twice a day, at 03:17 and 15:17 UTC; GitHub delays jobs at the start of the hour, so the minute is not :00.
@@ -28,8 +30,8 @@ jobs:
         with:
           node-version: 22
 
-      - name: Test the update script
-        run: node --test scripts/registry.test.mjs
+      - name: Test the update scripts
+        run: node --test scripts/registry.test.mjs scripts/profiles.test.mjs
 
       # When one provider's site cannot be read, the script still writes the other provider's changes and then fails.
       # The publish step runs either way, and the last step turns the run red so the problem is seen.
@@ -37,6 +39,13 @@ jobs:
         id: read
         continue-on-error: true
         run: node scripts/update-registry.mjs
+
+      # What each provider says about its models (purpose, size, capabilities) for Weehzi's model guide. Same rules: a
+      # provider whose site cannot be read keeps its entries, the rest is still written, and the run turns red.
+      - name: Read what each provider says about its models
+        id: profiles
+        continue-on-error: true
+        run: node scripts/update-profiles.mjs
 
       - name: Publish when the registry changed
         env:
@@ -47,9 +56,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if ! git diff --quiet -- model-context-registry.json; then
-            git add model-context-registry.json
-            git commit -m "Update context sizes from NVIDIA and OpenAI"
+          if ! git diff --quiet -- model-context-registry.json model-profiles.json; then
+            git add model-context-registry.json model-profiles.json
+            git commit -m "Update model context sizes and profiles"
             git push
             # The push normally starts a Pages build by itself (seen on 2026-11-10: asking as well started a second
             # build that was cancelled and reported as failed). Ask only when no build for this commit has started.
@@ -67,7 +76,7 @@ jobs:
           fi
 
       - name: Fail the run when a provider could not be read
-        if: steps.read.outcome == 'failure'
+        if: steps.read.outcome == 'failure' || steps.profiles.outcome == 'failure'
         run: |
           echo "A provider's site could not be read; see the step above. Anything that was read was still published."
           exit 1

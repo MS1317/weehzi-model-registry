@@ -36,3 +36,25 @@ How the job decides:
 - GitHub switches off a public repository's scheduled job after 60 days without activity. When nothing has changed for 45 days, the job makes an empty commit so the daily check keeps running.
 
 To run it by hand: `node scripts/update-registry.mjs --dry-run` reads and reports without writing; without `--dry-run` it writes the file. `node --test scripts/registry.test.mjs` runs its tests. It needs Node.js 22 or newer and no key.
+
+## Model profiles: what each model is for
+
+`model-profiles.json` holds what each provider says about its models on its own site, so Weehzi can tell a person what a
+model is for and which kinds of task it suits (Weehzi's model guide, `packages/shared/src/model-profile.ts`). It is a
+separate file on purpose: Weehzi refuses the whole context registry when one entry has a field it does not know.
+
+The same job reads it with `scripts/update-profiles.mjs` from public sources only:
+
+| Provider | List | Each model |
+| --- | --- | --- |
+| NVIDIA | the public model list | `build.nvidia.com` page data: parameter count, context, input kinds, function calling, reasoning, NVIDIA's labels and one-line description, and the model card's "Description" and "Use Case" |
+| OpenAI | the "all models" documentation page | the page's Markdown copy (`<page>.md`): one-line description, details, price, supported features and tools, deprecation |
+| Anthropic | the models overview | each model page's Markdown copy: what it is for, limits, price, latency (relative to the lineup), lifecycle |
+| Google Gemini | the models page | each model page's Markdown copy: description, inputs, limits, the capability grid |
+| Ollama | `https://ollama.com/api/tags` | `POST /api/show` (capabilities, parameter count, context) and the library page's description |
+
+Each entry keeps the maker's own words and typed facts only; it never says what a model is good at. Weehzi decides that
+from the facts. The rules are the context registry's: a page that fails keeps the old entry, a model that leaves its
+provider's list is removed, `readAt` changes only when what the page says changed, and the job writes nothing that
+Weehzi would refuse. `node scripts/update-profiles.mjs --dry-run` reads and reports without writing;
+`node --test scripts/profiles.test.mjs` runs its tests.
