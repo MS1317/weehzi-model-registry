@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "registryVersion": "2026-11-16.1",
-  "generatedAt": "2026-11-16T11:37:58.253Z",
+  "registryVersion": "2026-11-17.1",
+  "generatedAt": "2026-11-17T12:00:45.257Z",
   "entries": [
     {
       "provider": "openai",
@@ -814,15 +814,6 @@
       "provenance": {
         "source": "https://developers.openai.com/api/docs/models/o4-mini-deep-research",
         "verifiedAt": "2026-11-10T03:11:26.931Z"
-      }
-    },
-    {
-      "provider": "nvidia",
-      "modelId": "deepseek-ai/deepseek-v4.1-flash",
-      "contextWindow": 1048576,
-      "provenance": {
-        "source": "https://build.nvidia.com/deepseek-ai/deepseek-v4.1-flash",
-        "verifiedAt": "2026-11-08T21:35:37.329Z"
       }
     },
     {
