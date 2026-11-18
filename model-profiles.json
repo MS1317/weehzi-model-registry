@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-17T22:57:48.577Z",
+  "generatedAt": "2026-11-18T11:53:56.570Z",
   "entries": [
     {
       "provider": "anthropic",
@@ -1215,7 +1215,7 @@
       "modelId": "gemini-3.5-transcribe",
       "profile": {
         "name": "Gemini 3.5 Transcribe",
-        "description": "Gemini 3.5 Transcribe is a speech-to-text model based on Gemini's audio understanding capabilities. It provides low-latency, accurate transcription with utterance-based language detection, speaker diarization, word-level timestamps, Smart transcription, and custom vocabulary speech biasing.",
+        "description": "Gemini 3.5 Transcribe is a speech-to-text model based on Gemini's audio understanding capabilities. It provides low-latency, accurate transcription with utterance-based language detection, speaker diarization, word-level timestamps, Smart transcription (including voice editing), and custom vocabulary speech biasing.",
         "inputModalities": [
           "audio (up to 1 hour)"
         ],
@@ -1235,7 +1235,7 @@
       },
       "provenance": {
         "source": "https://aistudio.google.com/docs/models/gemini-3.5-transcribe",
-        "readAt": "2026-11-17T06:13:18.029Z"
+        "readAt": "2026-11-18T11:53:56.570Z"
       }
     },
     {
@@ -2228,35 +2228,6 @@
       },
       "provenance": {
         "source": "https://build.nvidia.com/nvidia/riva-translate-4b-instruct-v2",
-        "readAt": "2026-11-17T06:13:18.029Z"
-      }
-    },
-    {
-      "provider": "nvidia",
-      "modelId": "openai/gpt-oss-20b",
-      "profile": {
-        "name": "gpt-oss-20b",
-        "summary": "Smaller Mixture of Experts (MoE) text-only LLM for efficient AI reasoning and math",
-        "labels": [
-          "chat",
-          "math",
-          "reasoning",
-          "text-to-text"
-        ],
-        "parameters": 21000000000,
-        "contextWindow": 131072,
-        "inputModalities": [
-          "text"
-        ],
-        "outputModalities": [
-          "text"
-        ],
-        "toolCalling": true,
-        "structuredOutput": true,
-        "reasoning": true
-      },
-      "provenance": {
-        "source": "https://build.nvidia.com/openai/gpt-oss-20b",
         "readAt": "2026-11-17T06:13:18.029Z"
       }
     },

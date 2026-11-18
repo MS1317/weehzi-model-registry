@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "registryVersion": "2026-11-17.2",
-  "generatedAt": "2026-11-17T22:57:40.379Z",
+  "registryVersion": "2026-11-18.1",
+  "generatedAt": "2026-11-18T11:53:48.310Z",
   "entries": [
     {
       "provider": "openai",
@@ -941,15 +941,6 @@
       "contextWindow": 262144,
       "provenance": {
         "source": "https://build.nvidia.com/nvidia/nemotron-3.5-super-vl-120b-a12b",
-        "verifiedAt": "2026-11-08T21:35:37.329Z"
-      }
-    },
-    {
-      "provider": "nvidia",
-      "modelId": "openai/gpt-oss-20b",
-      "contextWindow": 131072,
-      "provenance": {
-        "source": "https://build.nvidia.com/openai/gpt-oss-20b",
         "verifiedAt": "2026-11-08T21:35:37.329Z"
       }
     },
