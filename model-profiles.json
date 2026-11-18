@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-18T11:53:56.570Z",
+  "generatedAt": "2026-11-18T22:37:43.948Z",
   "entries": [
     {
       "provider": "anthropic",
@@ -1571,6 +1571,49 @@
       "provenance": {
         "source": "https://aistudio.google.com/docs/models/gemini-4-hydrogen",
         "readAt": "2026-11-17T06:13:18.029Z"
+      }
+    },
+    {
+      "provider": "gemini",
+      "modelId": "gemini-4-neon",
+      "profile": {
+        "name": "Gemini 4 Neon",
+        "description": "Gemini 4 Neon (gemini-4-neon) brings frontier-level intelligence with fast end-to-end task completion across complex software engineering, knowledge work, and science workflows, featuring a unified 1M-token context window and long decode up to 1M tokens.",
+        "inputModalities": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "outputModalities": [
+          "text"
+        ],
+        "contextWindow": 1048576,
+        "maxOutputTokens": 65536,
+        "toolCalling": true,
+        "reasoning": true,
+        "structuredOutput": true,
+        "features": [
+          "agentic video understanding",
+          "code execution",
+          "computer use",
+          "context caching",
+          "file search",
+          "function calling",
+          "grounding with google maps",
+          "grounding with google search",
+          "structured outputs",
+          "thinking",
+          "url context",
+          "batch api",
+          "flex inference",
+          "priority inference"
+        ]
+      },
+      "provenance": {
+        "source": "https://aistudio.google.com/docs/models/gemini-4-neon",
+        "readAt": "2026-11-18T22:37:43.948Z"
       }
     },
     {
