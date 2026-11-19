@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-18T22:37:43.948Z",
+  "generatedAt": "2026-11-19T22:41:17.258Z",
   "entries": [
     {
       "provider": "anthropic",
@@ -1269,6 +1269,7 @@
           "grounding with google search",
           "structured outputs",
           "thinking",
+          "tool retrieval",
           "url context",
           "batch api",
           "flex inference",
@@ -1277,7 +1278,7 @@
       },
       "provenance": {
         "source": "https://aistudio.google.com/docs/models/gemini-3.6-flash",
-        "readAt": "2026-11-17T06:13:18.029Z"
+        "readAt": "2026-11-19T22:41:17.258Z"
       }
     },
     {
@@ -1311,6 +1312,7 @@
           "grounding with google search",
           "structured outputs",
           "thinking",
+          "tool retrieval",
           "url context",
           "batch api",
           "flex inference",
@@ -1319,7 +1321,7 @@
       },
       "provenance": {
         "source": "https://aistudio.google.com/docs/models/gemini-3.8-flash",
-        "readAt": "2026-11-17T06:13:18.029Z"
+        "readAt": "2026-11-19T22:41:17.258Z"
       }
     },
     {
@@ -1476,6 +1478,7 @@
           "grounding with google search",
           "structured outputs",
           "thinking",
+          "tool retrieval",
           "url context",
           "batch api",
           "flex inference",
@@ -1484,7 +1487,7 @@
       },
       "provenance": {
         "source": "https://aistudio.google.com/docs/models/gemini-4-argon",
-        "readAt": "2026-11-17T06:13:18.029Z"
+        "readAt": "2026-11-19T22:41:17.258Z"
       }
     },
     {
@@ -1732,6 +1735,35 @@
       "provenance": {
         "source": "https://aistudio.google.com/docs/models/gemini-robotics-er-1.6-preview",
         "readAt": "2026-11-17T06:13:18.029Z"
+      }
+    },
+    {
+      "provider": "gemini",
+      "modelId": "genie-4",
+      "profile": {
+        "name": "Genie 4",
+        "description": "Genie 4 (models/genie-4) is a real-time interactive world generation model on the Interactions API. Seed a world from a text prompt, a 16:9 reference image, or both, then explore and steer the live 24 fps video and 48 kHz stereo audio stream in real time using keyboard movement controls (WASD and arrow keys) and mid-session text events.",
+        "inputModalities": [
+          "text (world_setup",
+          "mid-session input steering)",
+          "16:9 reference image (world_setup)",
+          "keyboard",
+          "camera controls (user_action)"
+        ],
+        "outputModalities": [
+          "streaming video (16:9",
+          "24 fps) with synchronized 48 khz stereo audio"
+        ],
+        "toolCalling": false,
+        "structuredOutput": false,
+        "features": [
+          "interactive world generation",
+          "audio generation"
+        ]
+      },
+      "provenance": {
+        "source": "https://aistudio.google.com/docs/models/genie-4",
+        "readAt": "2026-11-19T22:41:17.258Z"
       }
     },
     {
@@ -2020,14 +2052,11 @@
           "Agentic Retrieval",
           "Code Retrieval",
           "Nemotron Retriever"
-        ],
-        "parameters": 1140918272,
-        "contextWindow": 32768,
-        "toolCalling": false
+        ]
       },
       "provenance": {
         "source": "https://build.nvidia.com/nvidia/nemotron-3-embed-1b",
-        "readAt": "2026-11-17T06:13:18.029Z"
+        "readAt": "2026-11-19T22:41:17.258Z"
       }
     },
     {
@@ -5846,6 +5875,33 @@
       "provenance": {
         "source": "https://developers.openai.com/api/docs/models/gpt-live-1",
         "readAt": "2026-11-17T06:13:18.029Z"
+      }
+    },
+    {
+      "provider": "openai",
+      "modelId": "gpt-live-1.1",
+      "profile": {
+        "name": "GPT-Live-1.1",
+        "summary": "Full-duplex voice model for multilingual conversations.",
+        "description": "GPT-Live-1.1 can listen while it speaks. Compared with GPT-Live-1, it transcribes speech more accurately and maintains a more consistent accent and voice across languages. Describe in plain language when the model should hand a task to your backend for reasoning or tool use.",
+        "inputModalities": [
+          "audio",
+          "text"
+        ],
+        "outputModalities": [
+          "audio",
+          "text"
+        ],
+        "toolCalling": true,
+        "structuredOutput": false,
+        "features": [
+          "streaming",
+          "function_calling"
+        ]
+      },
+      "provenance": {
+        "source": "https://developers.openai.com/api/docs/models/gpt-live-1.1",
+        "readAt": "2026-11-19T22:41:17.258Z"
       }
     },
     {
