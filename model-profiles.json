@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-20T22:16:14.554Z",
+  "generatedAt": "2026-11-22T11:37:23.759Z",
   "entries": [
     {
       "provider": "anthropic",
@@ -2665,6 +2665,31 @@
       "provenance": {
         "source": "https://ollama.com/library/gpt-oss",
         "readAt": "2026-11-17T06:13:18.029Z"
+      }
+    },
+    {
+      "provider": "ollama",
+      "modelId": "hy4",
+      "profile": {
+        "summary": "Tencent's flagship 770B open-weight model for coding, office work and research, with a 1M-token context and image and video understanding.",
+        "parameters": 774434002142,
+        "contextWindow": 1048576,
+        "inputModalities": [
+          "text",
+          "image"
+        ],
+        "toolCalling": true,
+        "reasoning": true,
+        "features": [
+          "thinking",
+          "completion",
+          "tools",
+          "vision"
+        ]
+      },
+      "provenance": {
+        "source": "https://ollama.com/library/hy4",
+        "readAt": "2026-11-22T11:37:23.759Z"
       }
     },
     {
