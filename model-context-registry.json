@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "registryVersion": "2026-11-18.1",
-  "generatedAt": "2026-11-18T11:53:48.310Z",
+  "registryVersion": "2026-11-23.1",
+  "generatedAt": "2026-11-23T13:05:00.862Z",
   "entries": [
     {
       "provider": "openai",
@@ -878,15 +878,6 @@
       "contextWindow": 262144,
       "provenance": {
         "source": "https://build.nvidia.com/nvidia/ising-calibration-1.5-31b",
-        "verifiedAt": "2026-11-08T21:35:37.329Z"
-      }
-    },
-    {
-      "provider": "nvidia",
-      "modelId": "nvidia/nemotron-3-embed-1b",
-      "contextWindow": 32768,
-      "provenance": {
-        "source": "https://build.nvidia.com/nvidia/nemotron-3-embed-1b",
         "verifiedAt": "2026-11-08T21:35:37.329Z"
       }
     },
