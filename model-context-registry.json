@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "registryVersion": "2026-11-23.1",
-  "generatedAt": "2026-11-23T13:05:00.862Z",
+  "registryVersion": "2026-11-24.1",
+  "generatedAt": "2026-11-24T23:56:19.137Z",
   "entries": [
     {
       "provider": "openai",
@@ -834,24 +834,6 @@
       "provenance": {
         "source": "https://developers.openai.com/api/docs/models/o4-mini-deep-research",
         "verifiedAt": "2026-11-10T03:11:26.931Z"
-      }
-    },
-    {
-      "provider": "nvidia",
-      "modelId": "google/gemma-4-31b-it",
-      "contextWindow": 262144,
-      "provenance": {
-        "source": "https://build.nvidia.com/google/gemma-4-31b-it",
-        "verifiedAt": "2026-11-08T21:35:37.329Z"
-      }
-    },
-    {
-      "provider": "nvidia",
-      "modelId": "meta/muse-glimmer-30b",
-      "contextWindow": 131072,
-      "provenance": {
-        "source": "https://build.nvidia.com/meta/muse-glimmer-30b",
-        "verifiedAt": "2026-11-08T21:35:37.329Z"
       }
     },
     {

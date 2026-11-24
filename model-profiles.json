@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-24T02:17:22.050Z",
+  "generatedAt": "2026-11-24T23:56:25.707Z",
   "entries": [
     {
       "provider": "anthropic",
@@ -1884,71 +1884,6 @@
       "provenance": {
         "source": "https://build.nvidia.com/fastino/gliner2-pii",
         "readAt": "2026-11-20T11:51:55.957Z"
-      }
-    },
-    {
-      "provider": "nvidia",
-      "modelId": "google/gemma-4-31b-it",
-      "profile": {
-        "name": "gemma-4-31b-it",
-        "summary": "Dense 31B model delivering frontier reasoning for coding, agentic workflows, and fine-tuning.",
-        "description": "Gemma 4 31B IT is an open multimodal model built by Google DeepMind that handles text and image inputs, can process video as sequences of frames, and generates text output. It is designed to deliver frontier-level performance for reasoning, agentic workflows, coding, and multimodal understanding on consumer GPUs and workstations, with a 256K-token context window and support for over 140 languages.",
-        "labels": [
-          "agentic",
-          "coding",
-          "reasoning",
-          "text-to-text"
-        ],
-        "parameters": 32682372656,
-        "contextWindow": 262144,
-        "inputModalities": [
-          "text",
-          "image",
-          "video"
-        ],
-        "outputModalities": [
-          "text"
-        ],
-        "toolCalling": true,
-        "structuredOutput": false,
-        "reasoning": true
-      },
-      "provenance": {
-        "source": "https://build.nvidia.com/google/gemma-4-31b-it",
-        "readAt": "2026-11-17T06:13:18.029Z"
-      }
-    },
-    {
-      "provider": "nvidia",
-      "modelId": "meta/muse-glimmer-30b",
-      "profile": {
-        "name": "muse-glimmer-30b",
-        "summary": "Muse Glimmer 30B is a multimodal reasoning model accepting text and images, with native tool-calling and separate reasoning output.",
-        "description": "Muse Glimmer is an approximately 29.6B-parameter dense multimodal causal language model with a dedicated perception encoder, distilled from Muse Spark and purpose-built for autonomous agentic tasks on consumer hardware. It accepts interleaved text and image inputs to produce text output and supports local operation without requiring cloud infrastructure or network access.",
-        "labels": [
-          "Chat",
-          "Image-to-Text",
-          "Large Language Models",
-          "Multimodal",
-          "Reasoning",
-          "Text-to-Text"
-        ],
-        "parameters": 29776626688,
-        "contextWindow": 131072,
-        "inputModalities": [
-          "text",
-          "image"
-        ],
-        "outputModalities": [
-          "text"
-        ],
-        "toolCalling": true,
-        "structuredOutput": false,
-        "reasoning": true
-      },
-      "provenance": {
-        "source": "https://build.nvidia.com/meta/muse-glimmer-30b",
-        "readAt": "2026-11-17T06:13:18.029Z"
       }
     },
     {
