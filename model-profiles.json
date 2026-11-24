@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-23T13:05:11.857Z",
+  "generatedAt": "2026-11-24T02:17:22.050Z",
   "entries": [
     {
       "provider": "anthropic",
@@ -193,13 +193,13 @@
         "knowledgeCutoff": "May 2025",
         "reasoning": true,
         "lifecycle": {
-          "status": "legacy",
-          "note": "Although Claude Opus 4.5 is still available, you should consider migrating to Claude Opus 5.5. See Claude Opus 5.5 · Migrate to Claude Opus 5.5"
+          "status": "deprecated",
+          "note": "Claude Opus 4.5 is deprecated: it is still functional but no longer recommended, and retires on January 22, 2027. Recommended replacement: Claude Opus 5.5. See Claude Opus 5.5 · Migrate to Claude Opus 5.5"
         }
       },
       "provenance": {
         "source": "https://platform.claude.com/docs/en/models/opus-4-5/overview",
-        "readAt": "2026-11-17T06:13:18.029Z"
+        "readAt": "2026-11-24T02:17:22.050Z"
       }
     },
     {
